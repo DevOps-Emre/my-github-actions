@@ -33,18 +33,22 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
-      - name: setup python
+          echo test, and deploy your project
+      - name: Checkout repository
+
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+
         uses: actions/setup-python@v2
-        with:
-          python-version: 3.8 #install the python needed
+
+        with: 
+          python-version: '3.9'
+
       - name: Install dependencies
-        run: |
-            python -m pip install --upgrade pip
-            pip install flake8 pytest
-            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          ref: # branch
-            my_other_branch
-      - name: execute py script # run file
-        run: |
-          python test.py
+
+        run: pip install -r requirements.txt
+
+      - name: Run script
+
+        run: python script.py  
