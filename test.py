@@ -20,7 +20,7 @@ while True:
     info = """
 ###  This program converts decimal numbers to Roman Numerals ###
 (To exit the program, please type "exit")
-Please enter a number between 1 and 3999, inclusively : """
+Please enter a number between 1 and 3999, inclusively : "1000"
 
     # get the user input after showing info text.
     # if is_invalid set to True then show additional warning to the user
