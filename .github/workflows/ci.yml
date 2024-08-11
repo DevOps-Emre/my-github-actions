@@ -35,4 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Run test.py file
-        run: ./test.py
+        run: |
+          chmod +x test.py,
+          ./test.py.
