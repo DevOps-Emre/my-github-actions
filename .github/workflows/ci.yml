@@ -36,5 +36,5 @@ jobs:
           echo test, and deploy your project.
       - name: Run test.py file
         run: |
-          chmod +x test.py,
+          chmod +x /test.py,
           ./test.py.
